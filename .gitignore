@@ -1,4 +1,6 @@
 google-chrome/
 discord/
 Electron/
-libreoffice
+libreoffice/
+vim/bundle/
+!vim/bundle/Vundle.vim/
