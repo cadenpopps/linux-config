@@ -13,8 +13,9 @@ ShowAppNameOnTitleBar=false
 ShowMenuBarByDefault=false
 
 [MainWindow]
-Height 1440=612
+Height 1440=930
 MenuBar=Disabled
 State=AAAA/wAAAAD9AAAAAAAACHAAAAVOAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
-Width 2160=2088
+Width 2160=1440
+Window-Maximized 1440x2160=true

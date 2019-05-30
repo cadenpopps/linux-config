@@ -67,6 +67,8 @@ alias glg='git log --pretty=format:"%C(reset)%h %ad%C(yellow bold)%d %Creset %C(
 alias gb='echo;git branch;echo'
 alias gbc='git branch'
 alias gbd='git branch -D'
+alias gr='git remote'
+alias grv='git remote -v'
 
 alias cppc='cppcompile'
 alias cppr='cpprun'
