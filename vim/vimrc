@@ -6,6 +6,7 @@ set numberwidth=5
 set ttyfast
 set lazyredraw
 set hidden
+set clipboard=unnamed
 set clipboard=unnamedplus
 syntax enable
 
@@ -68,13 +69,18 @@ nnoremap <C-z> :Goyo <bar> highlight StatusLineNC ctermfg=white <CR>
 
 "Keybindings
 nnoremap <Leader>n :edit ~/shared/notes/
+nnoremap <Leader>e :edit ~/.config/vim/vimrc<CR>
 nnoremap <Leader>s :source ~/.config/vim/vimrc<CR>
 nnoremap <C-s> <Esc>:noh<CR>:w<CR>
 nnoremap <C-q> <Esc>:q!<CR>
 nnoremap <C-p> <Esc><C-s>:Files<CR>
+nnoremap <Leader>p <Esc>:Ag 
 nnoremap <C-t> mt=ap`t
 imap <C-t> <Esc><C-t>
-noremap <Leader>t <Esc>mtgg=G`t
+nnoremap <Leader>t <Esc>mtgg=G`t
+nnoremap <Leader><Leader> <Esc>:vert ter<CR>
+nnoremap J gJ
+nnoremap K mmi<CR><Esc>`m
 
 "Navigation
 nnoremap j gj

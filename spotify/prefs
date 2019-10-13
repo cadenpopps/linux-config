@@ -8,6 +8,6 @@ app.autostart-mode=""
 app.window.position.y=76
 storage.last-location="/home/cadenpopps/.cache/spotify/Storage"
 app.window.position.width=2160
-core.clock_delta=0
+core.clock_delta=2
 app.last-launched-version="1.0.98.78.gb45d2a6b"
 app.autostart-configured=true
