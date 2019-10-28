@@ -69,9 +69,13 @@ alias gbd='git branch -D'
 alias gr='git remote'
 alias grv='git remote -v'
 
-alias cppc='cppcompile'
-alias cppr='cpprun'
+alias cc='ccompile'
+alias cr='crun'
+alias ccr='ccompilerun'
+
 alias cppcr='cppcompilerun'
+alias cppr='cpprun'
+alias cppc='~/.config/scripts/cppcompile.sh'
 alias pcppcr='echo "g++ *.cpp -lstdc++ -o output.o"'
 
 alias jc='javac'

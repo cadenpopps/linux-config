@@ -19,7 +19,7 @@ PS1='\[\033[38;2;190;190;239m\][\w]\[$(tput sgr0)\033[38;2;252;207;198m\] '
 
 unset color_prompt force_color_prompt
 
-export FZF_DEFAULT_COMMAND='ag -l --path-to-ignore .ignore --nocolor --hidden -g ""'
+export FZF_DEFAULT_COMMAND='ag -l --path-to-ignore .ignore --ignore .git --nocolor --hidden -g ""'
 
 function gitcommit(){
 	git add .
@@ -42,11 +42,21 @@ function gitcheckout(){
 	git checkout "$*"
 }
 
+function ccompile(){
+	gcc *.c -o output
+}
+function ccompilerun(){
+	ccomp; crun output
+}
+function crun(){
+	./"$*"
+}
+
 function cppcompile(){
-	g++ *.cpp -lstdc++ -o output.o
+	g++ *.cpp -lstdc++ -o output
 }
 function cppcompilerun(){
-	cppc; cppr output.o
+	cppc; cppr output
 }
 function cpprun(){
 	./"$*"
