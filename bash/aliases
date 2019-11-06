@@ -51,6 +51,7 @@ alias cdrl='cd /mnt/c/Users/Caden/Desktop/RL-Insider'
 alias cdp='cd ~/$_PROJECTS_DIR'
 alias cds='cd ~/documents/utd_fall_2019/'
 alias cddu='cd ~/$_DUNGEON_DIR;echo;git branch;echo'
+alias cdvim='cd $_VIM_DIR'
 
 alias txpack='/usr/share/texlive/texmf-dist/tex/latex'
 alias cdtxp='cd txpack'
