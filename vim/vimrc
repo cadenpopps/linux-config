@@ -126,15 +126,15 @@ nnoremap <Leader>s :source ~/.config/vim/vimrc<CR>
 nnoremap <Leader>i :PluginInstall<CR>:PluginUpdate<CR>
 nnoremap <Leader>l <ESC>:lopen<CR>
 nnoremap <Leader>; <ESC>:lclose<CR>
-nnoremap <Leader>f <ESC>:CallGrepAll 
-nnoremap <C-s> <ESC>:noh<CR>:w<CR>
+nnoremap <Leader>f <ESC>:CallGrepAll
+nnoremap <C-s> <ESC>:noh<CR>:RemoveWhitespace<CR>:Format<CR>:w<CR>
 nnoremap <C-b> <ESC>:!npm run build<CR>
 nnoremap <C-q> <ESC>:q!<CR>
 nnoremap <C-p> <ESC><C-s>:Files<CR>
 nnoremap <Leader>p <ESC>:Ag
-nnoremap <C-t> mt=ap`t
+nnoremap <C-t> <ESC>:RemoveWhitespace<CR>:Format<CR>
 imap <C-t> <ESC><C-t>
-nnoremap <Leader>t <ESC>:%s/\s\+$//e<CR>mtgg=G`t<CR>
+nnoremap <Leader>t <ESC>:RemoveWhitespace<CR>:Format<CR>
 nnoremap <Leader><Leader> <ESC>:vert ter<CR>
 nnoremap K mmi<CR><ESC>`m
 
@@ -150,10 +150,8 @@ nnoremap O O<ESC>
 nnoremap j gj
 nnoremap k gk
 
-nnoremap <down> ddp
 nnoremap <left> <Nop>
 nnoremap <right> <Nop>
-nnoremap <up> ddkP
 inoremap <down> <Nop>
 inoremap <left> <Nop>
 inoremap <right> <Nop>
@@ -193,7 +191,7 @@ set splitright
 
 "Fold config
 set foldlevel=1
-set foldmethod=syntax
+set foldmethod=indent
 set nofoldenable
 
 
@@ -226,6 +224,9 @@ set tags=tags;/,.tags;/
 
 
 " Functions
+command! Format :normal mtgg=G`tzz
+command! RemoveWhitespace :%s/\s\+$//e
+
 function! <SID>SynStack()
 	if !exists("*synstack")
 		return
