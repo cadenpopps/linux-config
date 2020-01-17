@@ -6,7 +6,7 @@ set t_Co=256
 let g:colors_name = "cadenpopps"
 
 "Light Blue - \lb - 189
-"Light Grey - \bg - 102
+"Light Grey - \lg - 102
 "Dark Grey - \dg - 243
 "Light Orange - \lo - 224
 "Dark Orange - \do - 174
@@ -28,7 +28,19 @@ hi qfFileName ctermfg=224 ctermbg=none cterm=bold
 hi qfLineNr ctermfg=174 ctermbg=none cterm=bold
 hi qfSeparator ctermfg=189 ctermbg=none cterm=bold
 
-"Javascript Specific
+"Notes
+hi notesUnderscoreGroup ctermfg=224 ctermbg=NONE cterm=underline
+
+hi notesTitle ctermfg=174 ctermbg=NONE cterm=italic
+hi notesSubtitle ctermfg=224 ctermbg=NONE cterm=none
+hi notesText ctermfg=189 ctermbg=NONE cterm=none
+hi notesSubtext ctermfg=153 ctermbg=NONE cterm=none
+hi notesDetail ctermfg=147 ctermbg=NONE cterm=none
+
+hi notesNumber ctermfg=188 ctermbg=NONE cterm=NONE
+
+
+"Javascript
 hi jsFuncCall ctermfg=224 ctermbg=none cterm=none
 hi jsFuncName ctermfg=224 ctermbg=none cterm=none
 
@@ -129,7 +141,7 @@ hi Question ctermfg=220 ctermbg=none cterm=none
 hi Operator ctermfg=174 ctermbg=none cterm=none
 hi Boolean ctermfg=7 ctermbg=none cterm=none
 hi String ctermfg=7 ctermbg=none cterm=none
-hi Number ctermfg=7 ctermbg=none cterm=none
+hi Number ctermfg=174 ctermbg=none cterm=none
 hi Character ctermfg=7 ctermbg=none cterm=none
 hi Statement ctermfg=189 ctermbg=none cterm=none
 hi Search ctermfg=224 ctermbg=59 cterm=none

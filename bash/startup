@@ -1,6 +1,6 @@
 case $- in
-	*i*) ;;
-	*) return;;
+*i*) ;;
+*) return;;
 esac
 
 [[ -z $XDG_CONFIG_HOME ]] && export XDG_CONFIG_HOME="$HOME/.config"
@@ -23,7 +23,7 @@ export FZF_DEFAULT_COMMAND='ag -l --path-to-ignore .ignore --ignore .git --nocol
 
 function gitcommit(){
 	git add .
-	git commit -a -m "$*"
+		git commit -a -m "$*"
 }
 function gitmerge(){
 	git merge "$*"
@@ -33,7 +33,7 @@ function gitpush() {
 }
 function gitcommitpush(){
 	gitcommit "$*"
-	gp
+		gp
 }
 function gitremote(){
 	git remote add origin git@github.com:cadenpopps/"$*".git
@@ -68,24 +68,24 @@ function codeopen(){
 
 function cdls(){
 	cd "$*"
-	ls
-}	
+		ls
+}
 
 env=~/.ssh/agent.env
 
 agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
 
 agent_start () {
-    (umask 077; ssh-agent >| "$env")
-    . "$env" >| /dev/null ; }
+	(umask 077; ssh-agent >| "$env")
+		. "$env" >| /dev/null ; }
 
-agent_load_env
+		agent_load_env
 
-function commitBashrc(){
-	cd
-		git add .
-		git commit -m $(date +%x_%H:%M)
-}
+		function commitBashrc(){
+			cd
+				git add .
+				git commit -m $(date +%x_%H:%M)
+		}
 
 function pullBashrc(){
 	cd
@@ -119,7 +119,7 @@ fi
 # 	rsync -rv -e ssh norm@192.168.0.50:/home/norm/shared/ ~/shared/
 # fi
 
-setxkbmap -option caps:swapescape
+setxkbmap -option caps:escape
 bind 'TAB':menu-complete
 bind "set show-all-if-ambiguous on"
 bind "set menu-complete-display-prefix on"

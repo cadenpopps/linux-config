@@ -1,8 +1,6 @@
 set nocompatible
 set noswapfile
 
-set autoindent
-
 set relativenumber
 set numberwidth=5
 set scl=no
@@ -14,8 +12,6 @@ set lazyredraw
 
 set hidden
 set clipboard=unnamedplus
-
-syntax enable
 
 set runtimepath=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME
 let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
@@ -43,8 +39,18 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'terryma/vim-smooth-scroll'
 
 call vundle#end()
-filetype plugin indent on
 
+filetype plugin indent on
+syntax enable
+set autoindent
+
+autocmd FileType text let b:did_indent = 1
+
+autocmd BufNewFile,BufRead *.notes set filetype=notes
+autocmd FileType notes source $HOME/.config/vim/lang/notes.vim
+
+" autocmd BufRead,BufNewFile *.notes set filetype=notes
+" autocmd Filetype notes source $MYVIMPATH/languages/notes.vim
 
 "Plugin Config
 
@@ -120,6 +126,7 @@ let @b='viwynviwhp@b'
 
 "Keybindings
 nnoremap <C-e> :call <SID>SynStack()<CR>
+nnoremap <Leader>w :set wrap!<CR>
 nnoremap <Leader>n :edit ~/shared/notes/
 nnoremap <Leader>e :edit ~/.config/vim/vimrc<CR>
 nnoremap <Leader>s :source ~/.config/vim/vimrc<CR>
@@ -127,7 +134,7 @@ nnoremap <Leader>i :PluginInstall<CR>:PluginUpdate<CR>
 nnoremap <Leader>l <ESC>:lopen<CR>
 nnoremap <Leader>; <ESC>:lclose<CR>
 nnoremap <Leader>f <ESC>:CallGrepAll
-nnoremap <C-s> <ESC>:RemoveWhitespace<CR>:Format<CR>:w<CR>:noh<CR>
+nnoremap <C-s> <ESC>:RemoveWhitespace<CR>:w<CR>:noh<CR>
 nnoremap <C-b> <ESC>:!npm run build<CR>
 nnoremap <C-q> <ESC>:q!<CR>
 nnoremap <C-p> <ESC><C-s>:Files<CR>
@@ -203,9 +210,7 @@ set smarttab
 
 
 "Spacing
-set autoindent
-set smartindent
-set wrap
+set nowrap
 set linebreak
 set backspace=indent,eol,start
 set virtualedit+=block
