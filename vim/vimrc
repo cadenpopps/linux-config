@@ -127,7 +127,7 @@ nnoremap <Leader>i :PluginInstall<CR>:PluginUpdate<CR>
 nnoremap <Leader>l <ESC>:lopen<CR>
 nnoremap <Leader>; <ESC>:lclose<CR>
 nnoremap <Leader>f <ESC>:CallGrepAll
-nnoremap <C-s> <ESC>:noh<CR>:RemoveWhitespace<CR>:Format<CR>:w<CR>
+nnoremap <C-s> <ESC>:RemoveWhitespace<CR>:Format<CR>:w<CR>:noh<CR>
 nnoremap <C-b> <ESC>:!npm run build<CR>
 nnoremap <C-q> <ESC>:q!<CR>
 nnoremap <C-p> <ESC><C-s>:Files<CR>

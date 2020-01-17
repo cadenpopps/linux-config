@@ -83,7 +83,7 @@ alias pcppcr='echo "g++ *.cpp -lstdc++ -o output.o"'
 
 alias jc='javac'
 alias jr='java Main.java;'
-alias jcr='javac Main.java; java Main.java;'
+alias jcr='javac *.java; java Main.java;'
 
 alias pr='python'
 
