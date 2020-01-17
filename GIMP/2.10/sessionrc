@@ -16,7 +16,7 @@
     (open-on-exit)
     (aux-info
         (left-docks-width "188")
-        (right-docks-width "205")
+        (right-docks-width "654")
         (maximized "yes"))
     (gimp-toolbox
         (side left)
@@ -88,8 +88,11 @@
     (factory-entry "gimp-file-export-dialog")
     (position 0 44)
     (size 1440 1080))
+(session-info "toplevel"
+    (factory-entry "gimp-file-open-location-dialog")
+    (position 0 158))
 
-(hide-docks no)
+(hide-docks yes)
 (single-window-mode yes)
 (show-tabs yes)
 (tabs-position 0)
