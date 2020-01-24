@@ -26,7 +26,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'ervandew/supertab'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe', { 'do': 'python YouCompleteMe/install.py' }
 Plugin 'SirVer/ultisnips'
 " Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
