@@ -1,19 +1,21 @@
 syntax enable
 
-set conceallevel=1
-set concealcursor=ni
+set conceallevel=3
+set concealcursor=
+set wrap
+set breakindent
 
-syn region notesUnderscoreGroup concealends start="_" end="/_"
-" syn match notesUnderscore /_/ containedin=notesUnderscoreGroup contained conceal
-" syn match notesUnderline /[^_]*/ containedin=notesUnderscoreGroup contained
+syn region notesTitle start="\(^\)\@<=[^ ^\t]" end="$" contains=ALL
+syn region notesSubtitle start="\(^\t\)\@<=[^ ^\t]" end="$" contains=ALL
+syn region notesText start="\(^\t\t\)\@<=[^ ^\t]" end="$" contains=ALL
+syn region notesSubtext start="\(^\t\t\t\)\@<=[^ ^\t]" end="$" contains=ALL
+syn region notesDetail start="\(^\t\t\t\t\)\@<=[^ ^\t]" end="$" contains=ALL
 
-syn match notesTitle /^\@<=[A-z0-9].*/
-syn match notesSubtitle /(?<=\t)[A-z0-9].*/
-syn match notesText /^\t\t[A-z0-9].*/
-syn match notesSubtext /^\t\t\t[A-z0-9].*/
-syn match notesDetail /^\t\t\t\t[A-z0-9].*/
+syn region notesHighlight matchgroup=Comment start="{" end="}" end="$" concealends contained contains=ALL
+syn region notesBold matchgroup=Comment start="\[" end="\]" end="$" concealends contained contains=ALL
+" syn region notesComment start="(" end=")" end="$" contained contains=ALL
+" syn match notesComment /([^)]*)/ contained
 
-syn match notesNumber /[0-9]/
 
 " Dates and Times
 "---------------------------------------------------------------------------
