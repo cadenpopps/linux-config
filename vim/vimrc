@@ -1,7 +1,7 @@
 set nocompatible
 set noswapfile
 
-set relativenumber
+set number
 set numberwidth=5
 set scl=no
 
@@ -128,8 +128,8 @@ let @b='viwynviwhp@b'
 nnoremap <C-e> :call <SID>SynStack()<CR>
 nnoremap <Leader>w :set wrap!<CR>
 nnoremap <Leader>n :edit ~/shared/notes/
-nnoremap <Leader>e :edit ~/.config/vim/vimrc<CR>
 nnoremap <Leader>s :source ~/.config/vim/vimrc<CR>
+nnoremap <Leader>h :e<CR>
 nnoremap <Leader>i :PluginInstall<CR>:PluginUpdate<CR>
 nnoremap <Leader>l <ESC>:lopen<CR>
 nnoremap <Leader>; <ESC>:lclose<CR>

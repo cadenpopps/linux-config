@@ -49,11 +49,12 @@ alias lss='ls --format=single-column -s --block-size=m'
 alias lsa='ls -a -t --format=verbose -s --block-size=k'
 
 alias cdl='cdls'
+alias cdv='cd $_VIM_DIR'
 alias cdd='cd /mnt/c/Users/Caden/Desktop'
 alias cdc='cd /mnt/c/Users/Caden/Desktop/cpp'
 alias cdrl='cd /mnt/c/Users/Caden/Desktop/RL-Insider'
 alias cdp='cd ~/$_PROJECTS_DIR'
-alias cds='cd ~/documents/utd_fall_2019/'
+alias cds='cd ~/school/'
 school=~/documents/utd_fall_2019/
 alias cddu='cd ~/$_DUNGEON_DIR;echo;git branch;echo'
 alias cdvim='cd $_VIM_DIR'

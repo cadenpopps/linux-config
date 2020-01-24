@@ -14,31 +14,25 @@ let g:colors_name = "cadenpopps"
 
 hi Normal ctermfg=189 ctermbg=none cterm=none
 hi LineNr ctermfg=224 ctermbg=none cterm=none
-hi CursorLineNr ctermfg=224 ctermbg=none cterm=reverse
+hi LineNrAbove ctermfg=174 ctermbg=none cterm=none
+hi LineNrBelow ctermfg=16 ctermbg=none cterm=none
+hi CursorLineNr ctermfg=189 ctermbg=none cterm=reverse
 
 "Comments
 hi Comment ctermfg=243 ctermbg=none cterm=none
 
-"Syntastic
-highlight link SyntasticError SpellBad
-highlight link SyntasticWarning SpellCap
-hi SyntasticError ctermfg=189 ctermbg=160 cterm=bold
-hi SyntasticWarning ctermfg=none ctermbg=243 cterm=bold
-hi qfFileName ctermfg=224 ctermbg=none cterm=bold
-hi qfLineNr ctermfg=174 ctermbg=none cterm=bold
-hi qfSeparator ctermfg=189 ctermbg=none cterm=bold
 
 "Notes
-hi notesUnderscoreGroup ctermfg=224 ctermbg=NONE cterm=underline
-
 hi notesTitle ctermfg=174 ctermbg=NONE cterm=italic
-hi notesSubtitle ctermfg=224 ctermbg=NONE cterm=none
-hi notesText ctermfg=189 ctermbg=NONE cterm=none
-hi notesSubtext ctermfg=153 ctermbg=NONE cterm=none
-hi notesDetail ctermfg=147 ctermbg=NONE cterm=none
+hi notesSubtitle ctermfg=224
+hi notesText ctermfg=189
+hi notesSubtext ctermfg=249
+hi notesDetail ctermfg=245
 
-hi notesNumber ctermfg=188 ctermbg=NONE cterm=NONE
-
+hi notesHighlight ctermfg=189 ctermbg=240
+hi notesBold cterm=bold
+hi notesComment cterm=italic
+" ctermfg=245
 
 "Javascript
 hi jsFuncCall ctermfg=224 ctermbg=none cterm=none
@@ -50,11 +44,13 @@ hi jsBracket ctermfg=189 ctermbg=none cterm=none
 hi jsVariableDef ctermfg=189 ctermbg=none cterm=none
 hi jsObjectProp ctermfg=189 ctermbg=none cterm=none
 
+
 " Values
-hi jsString ctermfg=7 ctermbg=none cterm=none
+hi jsString ctermfg=189 ctermbg=none cterm=none
 hi jsNumber ctermfg=7 ctermbg=none cterm=none
 hi jsBooleanTrue ctermfg=7 ctermbg=none cterm=none
 hi jsBooleanFalse ctermfg=7 ctermbg=none cterm=none
+
 
 " Noise
 hi jsParens ctermfg=243 ctermbg=none cterm=none
@@ -73,12 +69,24 @@ hi jsDot ctermfg=243 ctermbg=none cterm=none
 hi jsReturn ctermfg=174 ctermbg=none cterm=none
 
 
+"Syntastic
+highlight link SyntasticError SpellBad
+highlight link SyntasticWarning SpellCap
+hi SyntasticError ctermfg=189 ctermbg=160 cterm=bold
+hi SyntasticWarning ctermfg=none ctermbg=243 cterm=bold
+hi qfFileName ctermfg=224 ctermbg=none cterm=bold
+hi qfLineNr ctermfg=174 ctermbg=none cterm=bold
+hi qfSeparator ctermfg=189 ctermbg=none cterm=bold
+
+
 "JSON Specific
 hi jsonBraces ctermfg=189 ctermbg=none cterm=none
 
 
 "HTML Specific
 hi htmlLink ctermfg=189 ctermbg=none cterm=none
+hi htmlString ctermfg=224 ctermbg=none cterm=none
+hi htmlTagName ctermfg=174 ctermbg=none cterm=none
 
 
 "CSS Specific
@@ -183,7 +191,7 @@ hi NERDTreeExecFile ctermfg=224 ctermbg=none cterm=none
 
 "Diffs
 hi Include ctermfg=66 ctermbg=none cterm=none
-hi NonText ctermfg=none ctermbg=none cterm=none
+hi NonText ctermfg=0 ctermbg=none cterm=none
 hi ErrorMsg ctermfg=15 ctermbg=167 cterm=none
 hi vimBracket ctermfg=174 ctermbg=none cterm=none
 hi vimOpenParen ctermfg=174 ctermbg=none cterm=none
@@ -206,3 +214,4 @@ hi SpecialKey ctermfg=135 ctermbg=none cterm=none
 hi Repeat ctermfg=174 ctermbg=none cterm=none
 hi Macro ctermfg=66 ctermbg=none cterm=none
 hi Underlined ctermfg=172 ctermbg=none cterm=none
+hi FillChars ctermfg=0
