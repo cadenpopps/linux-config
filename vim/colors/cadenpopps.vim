@@ -47,9 +47,9 @@ hi jsObjectProp ctermfg=189 ctermbg=none cterm=none
 
 " Values
 hi jsString ctermfg=189 ctermbg=none cterm=none
-hi jsNumber ctermfg=7 ctermbg=none cterm=none
-hi jsBooleanTrue ctermfg=7 ctermbg=none cterm=none
-hi jsBooleanFalse ctermfg=7 ctermbg=none cterm=none
+hi jsNumber ctermfg=224 ctermbg=none cterm=none
+hi jsBooleanTrue ctermfg=224 ctermbg=none cterm=none
+hi jsBooleanFalse ctermfg=224 ctermbg=none cterm=none
 
 
 " Noise

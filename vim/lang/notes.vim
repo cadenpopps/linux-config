@@ -5,6 +5,10 @@ set concealcursor=
 set wrap
 set breakindent
 
+" syn region notesOpenBracket matchgroup=Comment start="\\" end="{" contained
+" syn region notesCloseBracket matchgroup=Comment start="\\" end="}" contained
+syn match notesCloseBracket /"\\\\@<={/ contained
+
 syn region notesTitle start="\(^\)\@<=[^ ^\t]" end="$" contains=ALL
 syn region notesSubtitle start="\(^\t\)\@<=[^ ^\t]" end="$" contains=ALL
 syn region notesText start="\(^\t\t\)\@<=[^ ^\t]" end="$" contains=ALL
